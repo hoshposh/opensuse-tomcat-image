@@ -63,7 +63,8 @@
     </xsl:template>
     
     <xsl:template match="/Server/Listener[@className='org.apache.catalina.core.AprLifecycleListener']">
-        <xsl:copy>            
+        <xsl:copy>  
+            <xsl:attribute name="className">org.apache.catalina.core.AprLifecycleListener</xsl:attribute>          
             <xsl:attribute name="FIPSMode">on</xsl:attribute>
         </xsl:copy>
     </xsl:template>
