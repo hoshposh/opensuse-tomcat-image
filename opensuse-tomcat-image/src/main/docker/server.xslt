@@ -62,13 +62,6 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="/Server/Listener[@className='org.apache.catalina.core.AprLifecycleListener']">
-        <xsl:copy>  
-            <xsl:attribute name="className">org.apache.catalina.core.AprLifecycleListener</xsl:attribute>          
-            <xsl:attribute name="FIPSMode">on</xsl:attribute>
-        </xsl:copy>
-    </xsl:template>
-
     <!-- Add an ErrorReportValve to stop display of stack trace and server info in error pages -->
     <xsl:template match="/Server/Service[@name='Catalina']/Engine[@name='Catalina']/Host[@name='localhost']">
         <xsl:copy>
